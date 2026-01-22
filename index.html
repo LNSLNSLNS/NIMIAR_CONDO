@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NIMIAR - Manutenção residencial com dedicação de dono. Profissionais verificados, atendimento prioritário e qualidade garantida.">
+  <meta property="og:title" content="NIMIAR - Facilities & Manutenção Residencial">
+  <meta property="og:description" content="Tudo que sua casa precisa, em um só lugar. Profissionais verificados e atendimento prioritário.">
+  <meta property="og:type" content="website">
+  <title>NIMIAR - Facilities & Manutenção Residencial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0D1B2A;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(197, 165, 114, 0.2);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #C5A572;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #C5A572;
+    }
+    
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #C5A572;
+      letter-spacing: 3px;
+    }
+    
+    nav {
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+        gap: 32px;
+      }
+      
+      nav a {
+        color: rgba(255,255,255,0.7);
+        transition: color 0.3s;
+      }
+      
+      nav a:hover {
+        color: #ffffff;
+      }
+    }
+    
+    .header-cta {
+      background: #C5A572;
+      color: #0D1B2A;
+      padding: 10px 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    }
+    
+    .header-cta:hover {
+      background: #B89562;
+    }
+    
+    /* Hero */
+    .hero {
+      padding: 140px 0 80px;
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(197, 165, 114, 0.1);
+      border: 1px solid rgba(197, 165, 114, 0.3);
+      padding: 8px 16px;
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+      color: #C5A572;
+    }
+    
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 56px;
+      }
+    }
+    
+    .hero h1 span {
+      color: #C5A572;
+    }
+    
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @media (min-width: 640px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+    }
+    
+    .btn-primary {
+      background: #C5A572;
+      color: #0D1B2A;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background: #B89562;
+    }
+    
+    .btn-secondary {
+      border: 2px solid #C5A572;
+      color: #C5A572;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(197, 165, 114, 0.1);
+    }
+    
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-alt {
+      background: rgba(27, 54, 93, 0.3);
+    }
+    
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #C5A572;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 40px;
+      }
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      gap: 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .service-card {
+      background: rgba(13, 27, 42, 0.5);
+      border: 1px solid rgba(197, 165, 114, 0.2);
+      padding: 24px;
+      transition: border-color 0.3s;
+    }
+    
+    .service-card:hover {
+      border-color: rgba(197, 165, 114, 0.5);
+    }
+    
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .service-icon {
+      font-size: 28px;
+    }
+    
+    .service-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #C5A572;
+    }
+    
+    .service-list {
+      list-style: none;
+    }
+    
+    .service-list li {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .service-list li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #C5A572;
+      border-radius: 50%;
+    }
+    
+    /* Two Column Section */
+    .two-col {
+      display: grid;
+      gap: 32px;
+    }
+    
+    @media (min-width: 1024px) {
+      .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .box {
+      padding: 32px;
+    }
+    
+    .box-light {
+      background: rgba(197, 165, 114, 0.05);
+      border: 1px solid rgba(197, 165, 114, 0.2);
+    }
+    
+    .box-highlight {
+      background: rgba(197, 165, 114, 0.1);
+      border: 2px solid rgba(197, 165, 114, 0.4);
+    }
+    
+    .box-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .box-header-icon {
+      font-size: 28px;
+    }
+    
+    .box-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #C5A572;
+    }
+    
+    .box-desc {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 24px;
+    }
+    
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    @media (max-width: 640px) {
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .mini-card {
+      background: rgba(13, 27, 42, 0.5);
+      border: 1px solid rgba(197, 165, 114, 0.1);
+      padding: 16px;
+    }
+    
+    .mini-card h4 {
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    
+    .mini-card p {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+    }
+    
+    .info-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(197, 165, 114, 0.1);
+      padding: 16px;
+      color: #C5A572;
+      font-size: 14px;
+    }
+    
+    .check-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: rgba(255,255,255,0.7);
+      padding: 8px 0;
+    }
+    
+    .check-list li::before {
+      content: '✓';
+      color: #C5A572;
+      font-weight: bold;
+    }
+    
+    /* Differentials */
+    .diff-grid {
+      display: grid;
+      gap: 24px;
+    }
+    
+    @media (min-width: 640px) {
+      .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .diff-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .diff-card {
+      text-align: center;
+      padding: 24px;
+      background: rgba(13, 27, 42, 0.5);
+      border: 1px solid rgba(197, 165, 114, 0.2);
+    }
+    
+    .diff-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    
+    .diff-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    
+    .diff-desc {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+    }
+    
+    /* Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .steps {
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+      }
+    }
+    
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: #C5A572;
+      color: #0D1B2A;
+      font-size: 24px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    
+    .step-text {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      max-width: 150px;
+    }
+    
+    .step-arrow {
+      color: #C5A572;
+      font-size: 24px;
+      display: none;
+    }
+    
+    @media (min-width: 768px) {
+      .step-arrow {
+        display: block;
+      }
+    }
+    
+    /* Concierge */
+    .concierge-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(197, 165, 114, 0.1);
+      border: 2px solid #C5A572;
+      padding: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .concierge-box {
+        padding: 48px;
+      }
+    }
+    
+    .concierge-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .badge-soon {
+      display: inline-block;
+      background: #C5A572;
+      color: #0D1B2A;
+      padding: 4px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    
+    .crown-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    
+    .concierge-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    
+    .concierge-subtitle {
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .concierge-features {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .concierge-features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .concierge-features ul {
+      list-style: none;
+    }
+    
+    .concierge-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.8);
+      padding: 8px 0;
+    }
+    
+    .concierge-features li::before {
+      content: '✓';
+      color: #C5A572;
+      font-weight: bold;
+    }
+    
+    .waitlist-box {
+      background: rgba(13, 27, 42, 0.5);
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .waitlist-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .waitlist-text {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .waitlist-cta {
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    
+    .waitlist-cta span {
+      color: #C5A572;
+      font-weight: 600;
+    }
+    
+    /* About */
+    .about-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(13, 27, 42, 0.5);
+      border: 1px solid rgba(197, 165, 114, 0.2);
+      padding: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .about-box {
+        padding: 48px;
+      }
+    }
+    
+    .about-intro {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+    
+    .about-intro strong {
+      color: #C5A572;
+    }
+    
+    .about-text {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+    }
+    
+    .founders-grid {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    @media (min-width: 768px) {
+      .founders-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .founder-card {
+      background: rgba(197, 165, 114, 0.05);
+      border: 1px solid rgba(197, 165, 114, 0.2);
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .founder-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(197, 165, 114, 0.2);
+      border: 1px solid rgba(197, 165, 114, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 28px;
+    }
+    
+    .founder-name {
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    
+    .founder-title {
+      color: #C5A572;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    .founder-exp {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #C5A572;
+      margin-bottom: 4px;
+    }
+    
+    .stat-label {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+    }
+    
+    /* Contact */
+    .contact-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(197, 165, 114, 0.1);
+      border: 2px solid #C5A572;
+      padding: 32px;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .contact-box {
+        padding: 48px;
+      }
+    }
+    
+    .contact-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #C5A572;
+      margin-bottom: 32px;
+    }
+    
+    .contact-grid {
+      display: grid;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    
+    @media (min-width: 640px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(197, 165, 114, 0.1);
+      border: 1px solid rgba(197, 165, 114, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      transition: background 0.3s;
+    }
+    
+    .contact-item:hover .contact-icon {
+      background: rgba(197, 165, 114, 0.2);
+    }
+    
+    .contact-label {
+      color: rgba(255,255,255,0.6);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .contact-value {
+      color: #C5A572;
+      font-weight: 600;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid rgba(197, 165, 114, 0.2);
+      text-align: center;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .footer-logo-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #C5A572;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #C5A572;
+    }
+    
+    .footer-logo-text {
+      color: #C5A572;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+    
+    .footer-text {
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    
+    .footer-copy {
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+    
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">▲</div>
+          <span class="logo-text">NIMIAR</span>
+        </div>
+        <nav>
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como Funciona</a>
+          <a href="#quem-somos">Quem Somos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <a href="https://wa.me/5511988127008" target="_blank" class="header-cta">
+          📞 <span>Contato</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        🎓 <span>Fundada por Engenheiros</span>
+      </div>
+      <h1>Tudo que sua casa precisa, <span>em um só lugar</span></h1>
+      <p class="hero-sub">
+        Profissionais verificados, atendimento prioritário e qualidade garantida. 
+        Manutenção residencial sem dor de cabeça.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5511988127008?text=Oi,%20preciso%20de%20um%20servi%C3%A7o" target="_blank" class="btn-primary">
+          Solicitar Serviço →
+        </a>
+        <a href="#programa-concierge" class="btn-secondary">
+          👑 Programa Exclusivo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="servicos" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Soluções completas para todas as necessidades da sua casa</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">⚡</span>
+            <h3 class="service-title">Elétrica</h3>
+          </div>
+          <ul class="service-list">
+            <li>Instalação de tomadas</li>
+            <li>Troca de disjuntores</li>
+            <li>Instalação de luminárias</li>
+            <li>Reparo de curto-circuito</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">💧</span>
+            <h3 class="service-title">Hidráulica</h3>
+          </div>
+          <ul class="service-list">
+            <li>Desentupimento</li>
+            <li>Troca de torneiras</li>
+            <li>Instalação de chuveiros</li>
+            <li>Reparo de descargas</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">❄️</span>
+            <h3 class="service-title">Ar-Condicionado</h3>
+          </div>
+          <ul class="service-list">
+            <li>Limpeza e higienização</li>
+            <li>Instalação</li>
+            <li>Manutenção preventiva</li>
+            <li>Recarga de gás</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">🔧</span>
+            <h3 class="service-title">Reparos Gerais</h3>
+          </div>
+          <ul class="service-list">
+            <li>Montagem de móveis</li>
+            <li>Instalação de prateleiras</li>
+            <li>Reparo de portas</li>
+            <li>Troca de fechaduras</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">🎨</span>
+            <h3 class="service-title">Pintura</h3>
+          </div>
+          <ul class="service-list">
+            <li>Pintura de ambientes</li>
+            <li>Reparo de paredes</li>
+            <li>Textura</li>
+            <li>Impermeabilização</li>
+          </ul>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-header">
+            <span class="service-icon">✨</span>
+            <h3 class="service-title">Limpeza Especializada</h3>
+          </div>
+          <ul class="service-list">
+            <li>Limpeza de caixa d'água</li>
+            <li>Limpeza de calhas</li>
+            <li>Limpeza pós-obra</li>
+            <li>Higienização de estofados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Services + Small Projects -->
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <!-- Other Services -->
+        <div class="box box-light">
+          <div class="box-header">
+            <span class="box-header-icon">📦</span>
+            <h3 class="box-title">Outros Serviços</h3>
+          </div>
+          <p class="box-desc">Parceiros especializados para demandas específicas</p>
+          
+          <div class="mini-grid">
+            <div class="mini-card">
+              <h4>Serralheria</h4>
+              <p>Grades, portões e estruturas metálicas</p>
+            </div>
+            <div class="mini-card">
+              <h4>Box de Banheiro</h4>
+              <p>Instalação e manutenção</p>
+            </div>
+            <div class="mini-card">
+              <h4>Fechamento de Varanda</h4>
+              <p>Vidros e esquadrias</p>
+            </div>
+            <div class="mini-card">
+              <h4>Persianas</h4>
+              <p>Instalação e reparo</p>
+            </div>
+          </div>
+          
+          <div class="info-box">
+            ❓ <span><strong>Não encontrou o que precisa?</strong> Entre em contato para saber se atendemos sua demanda.</span>
+          </div>
+        </div>
+
+        <!-- Small Projects -->
+        <div class="box box-highlight">
+          <div class="box-header">
+            <span class="box-header-icon">📋</span>
+            <h3 class="box-title">Pequenos Projetos</h3>
+          </div>
+          <p class="box-desc">
+            Reformas, adequações ou melhorias que precisam de coordenação entre diferentes profissionais?
+          </p>
+          
+          <ul class="check-list">
+            <li>Coordenação de múltiplos profissionais</li>
+            <li>Planejamento e cronograma integrado</li>
+            <li>Acompanhamento técnico por engenheiros</li>
+            <li>Orçamento unificado e transparente</li>
+          </ul>
+          
+          <a href="https://wa.me/5511988127008?text=Oi,%20tenho%20um%20projeto%20que%20precisa%20de%20mais%20de%20um%20profissional" target="_blank" class="btn-primary">
+            💼 Consultar Projeto
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentials -->
+  <section class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Por que a NIMIAR?</h2>
+      
+      <div class="diff-grid">
+        <div class="diff-card">
+          <div class="diff-icon">✓</div>
+          <h3 class="diff-title">Verificados</h3>
+          <p class="diff-desc">Profissionais testados e aprovados</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">💬</div>
+          <h3 class="diff-title">Prioritário</h3>
+          <p class="diff-desc">Atendimento ágil via WhatsApp</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">💰</div>
+          <h3 class="diff-title">Preço Justo</h3>
+          <p class="diff-desc">Orçamentos validados</p>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">👁️</div>
+          <h3 class="diff-title">Acompanhamento</h3>
+          <p class="diff-desc">Do início ao fim</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="como-funciona">
+    <div class="container">
+      <h2 class="section-title">Como Funciona</h2>
+      <p class="section-subtitle">Simples e direto - é só mandar uma mensagem</p>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <p class="step-text">Mande mensagem com o problema</p>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p class="step-text">Receba orçamento validado</p>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p class="step-text">Aprove e agende</p>
+        </div>
+        <span class="step-arrow">→</span>
+        <div class="step">
+          <div class="step-number">4</div>
+          <p class="step-text">Problema resolvido!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concierge Program -->
+  <section id="programa-concierge" class="section-alt">
+    <div class="container">
+      <div class="concierge-box">
+        <div class="concierge-header">
+          <span class="badge-soon">EM BREVE</span>
+          <div class="crown-icon">👑</div>
+          <h2 class="concierge-title">Programa Concierge</h2>
+          <p class="concierge-subtitle">Seu assistente pessoal de manutenção</p>
+        </div>
+        
+        <div class="concierge-features">
+          <ul>
+            <li>Atendimento prioritário via WhatsApp</li>
+            <li>Descontos exclusivos em todos os serviços</li>
+            <li>Acompanhamento personalizado</li>
+          </ul>
+          <ul>
+            <li>Acesso a campanhas especiais</li>
+            <li>Orientação técnica para pequenos reparos</li>
+            <li>Relatórios de manutenção da sua casa</li>
+          </ul>
+        </div>
+        
+        <div class="waitlist-box">
+          <div class="waitlist-indicator">
+            <div class="pulse-dot"></div>
+            <span class="waitlist-text">Vagas Limitadas</span>
+          </div>
+          <p class="waitlist-cta">
+            Demonstre interesse e <span>entre na lista de espera</span>
+          </p>
+          <a href="https://wa.me/5511988127008?text=Oi,%20quero%20entrar%20na%20lista%20de%20espera%20do%20Programa%20Concierge" target="_blank" class="btn-primary">
+            ✉️ Entrar na Lista
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="quem-somos">
+    <div class="container">
+      <h2 class="section-title">Quem Somos</h2>
+      
+      <div class="about-box">
+        <p class="about-intro">
+          A <strong>NIMIAR</strong> nasceu da experiência de engenheiros 
+          que entenderam uma dor comum: a dificuldade de encontrar profissionais confiáveis para 
+          cuidar da nossa casa.
+        </p>
+        
+        <p class="about-text">
+          Unimos conhecimento técnico, processos padronizados e uma rede de profissionais 
+          verificados para oferecer o que você merece: <strong>tranquilidade</strong>.
+        </p>
+        
+        <div class="founders-grid">
+          <div class="founder-card">
+            <div class="founder-icon">🎓</div>
+            <p class="founder-name">Fundador</p>
+            <p class="founder-title">Engenheiro Elétrico e Mecânico</p>
+            <p class="founder-exp">Ex-Gerente de Projetos e Diretor de Operações</p>
+          </div>
+          <div class="founder-card">
+            <div class="founder-icon">🎓</div>
+            <p class="founder-name">Sócio-Diretor</p>
+            <p class="founder-title">Engenheiro Civil</p>
+            <p class="founder-exp">Fundador de construtora</p>
+          </div>
+        </div>
+        
+        <div class="stats-grid">
+          <div>
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Profissionais Verificados</div>
+          </div>
+          <div>
+            <div class="stat-value">SP</div>
+            <div class="stat-label">São Paulo e Região</div>
+          </div>
+          <div>
+            <div class="stat-value">24/7</div>
+            <div class="stat-label">Suporte via WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contato" class="section-alt">
+    <div class="container">
+      <div class="contact-box">
+        <h2 class="contact-title">Fale Conosco</h2>
+        
+        <div class="contact-grid">
+          <a href="https://wa.me/5511988127008" target="_blank" class="contact-item">
+            <div class="contact-icon">📱</div>
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">(11) 98812-7008</span>
+          </a>
+          
+          <a href="https://instagram.com/nimiar_hf" target="_blank" class="contact-item">
+            <div class="contact-icon">📷</div>
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@nimiar_hf</span>
+          </a>
+          
+          <a href="#" class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <span class="contact-label">Site</span>
+            <span class="contact-value">nimiar.com.br</span>
+          </a>
+        </div>
+        
+        <a href="https://wa.me/5511988127008?text=Oi,%20preciso%20de%20um%20servi%C3%A7o" target="_blank" class="btn-primary">
+          📞 Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">▲</div>
+        <span class="footer-logo-text">NIMIAR</span>
+      </div>
+      <p class="footer-text">Facilities & Manutenção Residencial • São Paulo, SP</p>
+      <p class="footer-copy">© 2026 NIMIAR. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/5511988127008?text=Oi!" class="whatsapp-float" target="_blank" title="Chamar no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</body>
+</html>
